@@ -20,4 +20,5 @@
     - client.js now puts the the string in the input val() and the user sees the anser to there math problem.
 
 ##Future goals
-- fix bug were pressing equal with input field of / number or * number brakes application
+- add other math functions
+- allow math symbols from keypress

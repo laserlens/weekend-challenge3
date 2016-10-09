@@ -23,6 +23,9 @@ router.get('/',function (req, res) {
 //clears out NaN and syntax errors such as sending 5 / but can't clear / 5 :(
 router.delete('/',function (req, res) {
   console.log('got the clear');
+  mathObject = [0,0];
+  console.log('before', mathObject);
   mathObject = [];
+  console.log('before', mathObject);
 });
 module.exports = router;
