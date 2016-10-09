@@ -20,7 +20,9 @@ router.get('/',function (req, res) {
   res.send(answer.toString());
   mathObject = [];
 });
-
-
-
+//clears out NaN and syntax errors such as sending 5 / but can't clear / 5 :(
+router.delete('/',function (req, res) {
+  console.log('got the clear');
+  mathObject = [];
+});
 module.exports = router;

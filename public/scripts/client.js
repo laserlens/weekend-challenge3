@@ -1,16 +1,22 @@
 $(function () {
 
-  //jquery allowing only number inputs and math inputs
+  // turn off all keypresses on input except the numbers
+  $('input').keypress(function(e) {
+    var a = [];
+    var k = e.which;
+    for (i = 48; i < 58; i++)
+      a.push(i);
+    if (!(a.indexOf(k)>=0))
+      e.preventDefault();
+    });
 
-
-  //on click event listener
+  //on submit event listener
   $('form').on('submit', function(event){
     event.preventDefault();
 
      var mathInput = $("input[type='text']").val();
-     //turn string into array
 
-     //send array to calculator.js
+     //creates object and sends to calculator.js
      $.ajax({
         type: 'POST',
         url: '/calculator',
@@ -19,6 +25,8 @@ $(function () {
           console.log('got it');
         }
       });//end of ajax
+
+      //gets the answer from calculator.js and puts it into input.val()
       $.ajax({
         type: 'GET',
         url: '/calculator',
@@ -41,15 +49,15 @@ $(function () {
 
   });//end of theButtons event listener
 
+  //when clear button is pressed also tell calculator.js to reset mathObject to []
+  $('#clearButton').click(function(){
+    $.ajax({
+       type: 'DELETE',
+       url: '/calculator',
+       success: function () {
+         console.log('cleared it');
+       }
+     });//end of ajax
 
+  });
 });//end of jquery
-
-
-
-//javascript funiton to turn array into object
-// function toObject(arr) {
-//   var mathObject = {};
-//   for (var i = 0; i < arr.length; ++i)
-//     mathObject[i] = arr[i];
-//   return mathObject;
-// }

@@ -4,3 +4,8 @@ button:focus {
 input:focus {
   outline: 0;
 }
+#mainDiv{
+  width: 24em;
+  border: solid;
+  padding: 2em;
+}
