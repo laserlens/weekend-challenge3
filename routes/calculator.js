@@ -14,18 +14,18 @@ router.get('/',function (req, res) {
   var mathArray = mathObject.map(function (mathObject) {
     return mathObject.type;
   });
-  console.log('what is this array', mathArray);
+  //console.log('what is this array', mathArray);
   var answer = eval(mathArray.join(' '));
-  console.log('what is this answer', answer);
+  //console.log('what is this answer', answer);
   res.send(answer.toString());
   mathObject = [];
 });
-//clears out NaN and syntax errors such as sending 5 / but can't clear / 5 :(
+//clears out NaN and syntax errors such as sending 5 /
 router.delete('/',function (req, res) {
   console.log('got the clear');
   mathObject = [0,0];
-  console.log('before', mathObject);
+  //console.log('before', mathObject);
   mathObject = [];
-  console.log('before', mathObject);
+  //console.log('before', mathObject);
 });
 module.exports = router;
