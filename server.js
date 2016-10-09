@@ -1,12 +1,16 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
+var calculatorRouter = require('./routes/calculator.js');
 
 var app = express();
+
 
 //middleware
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
+app.use('/calculator', calculatorRouter);
+
 
 //help make sure stuff works
 app.use(function(req, res, next){
