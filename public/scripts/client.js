@@ -8,9 +8,9 @@ $(function () {
     event.preventDefault();
 
      var mathInput = $("input[type='text']").val();
-     //var mathThing = $(this).serialize();
-     //console.log('whats mathTing', mathThing);
-     //send string to calculator
+     //turn string into array
+
+     //send array to calculator.js
      $.ajax({
         type: 'POST',
         url: '/calculator',

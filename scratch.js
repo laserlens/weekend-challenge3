@@ -16,5 +16,6 @@ for (var i = 0; i < mathArray.length; i++) {
   }
   console.log(numbers[0] + mathElement[1] + numbers[2]);
 
-
+//var mathThing = $(this).serialize();
   var mathArray = mathText.split(" ");
+  var mathArray = mathInput.split(" ");

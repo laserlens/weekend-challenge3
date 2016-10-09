@@ -7,15 +7,18 @@ var mathObject = [];
 
 router.post('/', function(req, res){
   res.sendStatus(200);
-  //mathObject = req.body.title;
+  //push array from client.js to mathObject
   mathObject.push(req.body);
 });
 router.get('/',function (req, res) {
-  var mathText = mathObject.type;
-  console.log('what is this text', mathText);
-  var answer = eval(mathText);
+  var mathArray = mathObject.map(function (mathObject) {
+    return mathObject.type;
+  });
+  console.log('what is this array', mathArray);
+  var answer = eval(mathArray.join(' '));
   console.log('what is this answer', answer);
-  res.send(answer);
+  res.send(answer.toString());
+  mathObject = [];
 });
 
 
