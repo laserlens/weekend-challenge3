@@ -19,6 +19,12 @@
   6. Then it sends string back to client.js
     - client.js now puts the the string in the input val() and the user sees the anser to there math problem.
   7. Easter Egg audio on ERROR
+
+##Things to know
+- disabled keypresses other then numbers
+- disabled paste to minimize user error input
+- created unique name on input to stop browser auto fill
+
 ##Future goals
 - add other math functions
 - allow math symbols from keypress
