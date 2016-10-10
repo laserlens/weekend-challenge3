@@ -5,11 +5,11 @@
 - user inputs data as numbers and math symbols.
   - ex: 1 + 2 * 56 / 2
 - when equal button is pressed
-  1. Whe apove sting is turned into an object value with ajax post and data.
+  1. When above sting is turned into an object value with ajax post and data.
   2. That object is sent to calculator.js as a post.
   3. While in caluclator.js
     - it is turned into an array of objects
-  4. back at the client.js file
+  4. Back at the client.js file
     - the equal button after finishing the ajax post now start the ajax get
   5. When the calculator.js gets the get request
     - it takes the new array of object
@@ -26,5 +26,7 @@
 - created unique name on input to stop browser auto fill
 
 ##Future goals
+- remove eval() since further research on this reveals it is not the fastest or safest option
 - add other math functions
 - allow math symbols from keypress
+- allow use of () to tell witch math operations to do first
