@@ -18,7 +18,7 @@
     - runs the string to eval() with .join to turn value into string then do the math.
   6. Then it sends string back to client.js
     - client.js now puts the the string in the input val() and the user sees the anser to there math problem.
-
+  7. Easter Egg audio on ERROR
 ##Future goals
 - add other math functions
 - allow math symbols from keypress

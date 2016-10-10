@@ -24,8 +24,8 @@ router.get('/',function (req, res) {
 router.delete('/',function (req, res) {
   console.log('got the clear');
   mathObject = [0,0];
-  //console.log('before', mathObject);
+  //console.log('before finial clear', mathObject);
   mathObject = [];
-  //console.log('before', mathObject);
+  //console.log('final clear', mathObject);
 });
 module.exports = router;
